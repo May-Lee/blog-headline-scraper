@@ -26,7 +26,7 @@
             const headlines = htmlDocument.querySelectorAll(".elementor-post__title")
               for (let i = 0; i < headlines.length; i++) {
               let elemn = headlines[i]
-              scraped.push(elemn.textContent)
+              scraped.push(elemn.innerHTML)
               console.log("headlines")
               }
             } catch (error) {

@@ -7,43 +7,85 @@
     <title>LA Headlines Scraper</title>
   </head>
   <body>
-    <ul id="headlines">
-    </ul>
-	  <script>
-      var scraped = []
-
-      async function getHeadlines() {
-        let laURL = "https://leastauthority.com/blog/"
-        const PROXY_URL = 'https://cors-anywhere.herokuapp.com/'
-        for (let i = 1; i < 11; i++) {
-            let pageNumber = i.toString()
-            console.log(pageNumber)
-          try {
-            const response = await fetch(PROXY_URL + laURL+ 'page/' + pageNumber + '/')
-            const data = await response.text()
-            const parser = new DOMParser()
-            const htmlDocument = parser.parseFromString(data, "text/html")
-            const headlines = htmlDocument.querySelectorAll(".elementor-post__title")
-              for (let i = 0; i < headlines.length; i++) {
-              let elemn = headlines[i]
-              scraped.push(elemn.innerContent)
-              console.log("headlines")
-              }
-            } catch (error) {
-              console.log(error)
-            }
-          }
-          for (let i = 0; i < scraped.length; i++) {
-            let scrapedHeadline = scraped[i]
-            const node = document.createElement("li")
-            const text_heading = document.createTextNode(scrapedHeadline)
-            node.appendChild(text_heading)
-            document.getElementById("headlines").appendChild(node)
-            console.log("appending")
-          }
-        }
-        
-      getHeadlines()
-    </script>
+    <a href="https://leastauthority.com/blog/audit-of-alex-protocol-smart-contracts-for-alex/" data-wpel-link="internal"> Audit of ALEX Protocol Smart Contracts for ALEX </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-erc-1155-token-smart-contract-for-arkane-network/" data-wpel-link="internal"> Audit of ERC-1155 Token Smart Contract for Arkane Network </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-bee-bee-clef-for-swarm-association/" data-wpel-link="internal"> Audit of Bee + Bee Clef for Swarm Association </a><p></p>
+<a href="https://leastauthority.com/blog/disclosure-of-security-vulnerabilities-in-atomic-wallet/" data-wpel-link="internal"> Disclosure of Security Vulnerabilities in Atomic Wallet, Audited by Least Authority </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-pawn-smart-contracts-for-pawn-finance/" data-wpel-link="internal"> Audit of Pawn Smart Contracts for Arcade (previously Pawn Finance) </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-zkopru-zk-snark-circuits-smart-contracts-for-ethereum-foundation/" data-wpel-link="internal"> Audit of Zkopru zk-SNARK Circuits + Smart Contracts for Ethereum Foundation </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-kickflow-smart-contracts-for-the-tezos-foundation/" data-wpel-link="internal"> Audit of Kickflow Smart Contracts for the Tezos Foundation </a><p></p>
+<a href="https://leastauthority.com/blog/2021-in-review-how-we-contributed-to-web3/" data-wpel-link="internal"> 2021 in Review: How We Contributed to Web3 </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-compound-pando-for-fox-one/" data-wpel-link="internal"> Audit of Compound + Pando for Fox One </a><p></p>
+<a href="https://leastauthority.com/blog/mw4all-2-0-project-completed-bringing-identity-less-and-secure-file-transfers-to-the-web/" data-wpel-link="internal"> MW4ALL 2.0 Project Completed: Bringing Identity-less and Secure File Transfers to the Web </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-the-synthetic-asset-platform-smart-contracts-for-tezos-foundation/" data-wpel-link="internal"> Audit of the Synthetic Asset Platform Smart Contracts for the Tezos Foundation </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-mina-signer-sdk-and-stakingpower-wallet/" data-wpel-link="internal"> Audit of the Mina Signer SDK + StakingPower Wallet for Mina Foundation </a><p></p>
+<a href="https://leastauthority.com/blog/blank-wallet-browser-extension/" data-wpel-link="internal"> Audit of Blank Wallet Browser Extension </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-aleo-trusted-setup-phase-1/" data-wpel-link="internal"> Audit of Aleo Trusted Setup: Phase 1 </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-auro-wallet-extension-for-mina-foundation/" data-wpel-link="internal"> Audit of Auro Wallet Extension for Mina Foundation </a><p></p>
+<a href="https://leastauthority.com/blog/celebrating-a-milestone-least-authoritys-100th-security-audit/" data-wpel-link="internal"> Celebrating a Milestone: Least Authority’s 100th Security Audit </a><p></p>
+<a href="https://leastauthority.com/blog/announcing-the-release-of-the-zkaps-whitepaper/" data-wpel-link="internal"> Announcing the Release of the ZKAPs Whitepaper </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-clabs-plumo-protocol-arithmetic-optimizations/" data-wpel-link="internal"> Audit of cLabs’ Plumo Protocol: Arithmetic Optimizations </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-clorio-wallet-mina-ledger-js-for-mina-foundation/" data-wpel-link="internal"> Audit of Clorio Wallet + Mina Ledger JS for Mina Foundation </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-hiros-stacks-wallet/" data-wpel-link="internal"> Audit of Hiro’s Stacks Wallet </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-cosmos-sdk-liquidity-module-for-all-in-bits/" data-wpel-link="internal"> Audit of Cosmos SDK Liquidity Module for All in Bits </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-venus-for-filecoin-foundation/" data-wpel-link="internal"> Audit of Venus for Filecoin Foundation </a><p></p>
+<a href="https://leastauthority.com/blog/audit-preparation-checklist-5-important-steps-to-prepare-for-a-security-audit/" data-wpel-link="internal"> Audit Preparation Checklist: 5 Important Steps to Prepare for a Security Audit </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-eip-3074-for-ethereum-foundation/" data-wpel-link="internal"> Audit of EIP-3074 for Ethereum Foundation </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-pendle-finances-pendle-protocol-smart-contracts/" data-wpel-link="internal"> Audit of Pendle Finance’s Pendle Protocol Smart Contracts </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-wrap-protocol-smart-contracts-for-tezos-foundation/" data-wpel-link="internal"> Audit of Wrap Protocol Smart Contracts for Tezos Foundation </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-chia-networks-coloured-coins-implementation/" data-wpel-link="internal"> Audit of Chia Network’s Coloured Coins Implementation </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-scopelifts-umbra-js/" data-wpel-link="internal"> Audit of ScopeLift’s Umbra-js </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-fractals-staking-and-claims-registry-smart-contracts/" data-wpel-link="internal"> Audit of Fractal’s Staking and Claims Registry Smart Contracts </a><p></p>
+<a href="https://leastauthority.com/blog/mw4all-participates-in-ngi-bootcamp/" data-wpel-link="internal"> MW4ALL Participates in NGI Bootcamp </a><p></p>
+<a href="https://leastauthority.com/blog/mw4all-2-0-exploring-the-product-potential-of-secure-file-transfer/" data-wpel-link="internal"> MW4ALL 2.0: Exploring the Product Potential of Secure File Transfer </a><p></p>
+<a href="https://leastauthority.com/blog/open-source-projects-pitch-party/" data-wpel-link="internal"> Least Authoritarians Reveal Open-Source Projects That Make a Difference in Their Lives </a><p></p>
+<a href="https://leastauthority.com/blog/security-consulting-faqs-page-is-live/" data-wpel-link="internal"> Security Consulting FAQs Page is Live </a><p></p>
+<a href="https://leastauthority.com/blog/privy-to-will-be-featured-at-copenhagen-international-documentary-film-festival/" data-wpel-link="internal"> ‘Privy To’ Will Be Featured at Copenhagen International Documentary Film Festival (April 22-May 2) </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-equilibriums-vanilla-smart-contracts/" data-wpel-link="internal"> Audit of Equilibrium’s Vanilla Smart Contracts </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-blox-staking-wallet/" data-wpel-link="internal"> Audit of Blox Staking Wallet </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-loopring-3-6-design-implementation-smart-contracts-and-circuit/" data-wpel-link="internal"> Audit of Loopring 3.6 Design + Implementation: Smart Contracts and Circuit </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-quipuswap-smart-contracts-for-tezos-foundation/" data-wpel-link="internal"> Audit of QuipuSwap Smart Contracts for Tezos Foundation </a><p></p>
+<a href="https://leastauthority.com/blog/kolibri-smart-contracts-for-tezos-foundation/" data-wpel-link="internal"> Audit of Kolibri Smart Contracts for Tezos Foundation </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-stablys-tezos-stablecoin-for-tezos-foundation/" data-wpel-link="internal"> Audit of Stably’s Tezos Stablecoin for Tezos Foundation </a><p></p>
+<a href="https://leastauthority.com/blog/presenting-zkaps-at-hello-decentralization-conference/" data-wpel-link="internal"> Presenting ZKAPs at Hello Decentralization Conference </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-harvest-smart-contracts-for-harvest-finance/" data-wpel-link="internal"> Audit of Harvest Smart Contracts for Harvest Finance </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-mina-ledger-application-for-o1-labs/" data-wpel-link="internal"> Audit of Mina Ledger Application for O(1) Labs </a><p></p>
+<a href="https://leastauthority.com/blog/privatestorage-is-coming-soon/" data-wpel-link="internal"> PrivateStorage is Coming Soon! </a><p></p>
+<a href="https://leastauthority.com/blog/the-hro-cloud-least-authority-launches-secure-cloud-storage-for-human-rights-organizations/" data-wpel-link="internal"> The HRO Cloud: Least Authority Launches Secure Cloud Storage for Human Rights Organizations </a><p></p>
+<a href="https://leastauthority.com/blog/zero-knowledge-privacy-in-regulated-financial-transactions/" data-wpel-link="internal"> Zero Knowledge Privacy in Regulated Financial Transactions </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-lotus-implementation-subcomponents-for-protocol-labs/" data-wpel-link="internal"> Audit of Lotus Implementation + Subcomponents for Protocol Labs </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-lisk-project-protocol-design-implementation/" data-wpel-link="internal"> Audit of Lisk Project: Protocol Design + Implementation </a><p></p>
+<a href="https://leastauthority.com/blog/2020-least-authoritys-year-in-review/" data-wpel-link="internal"> 2020: Least Authority’s Year in Review </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-ethdo-for-ethereum-foundation/" data-wpel-link="internal"> Audit of ethdo for Ethereum Foundation </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-metastate-ags-multi-asset-shielded-pool-for-tezos-foundation/" data-wpel-link="internal"> Audit of Metastate AG’s Multi-Asset Shielded Pool for Tezos Foundation </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-beacon-sdk-for-tezos-foundation/" data-wpel-link="internal"> Audit of Beacon SDK for Tezos Foundation </a><p></p>
+<a href="https://leastauthority.com/blog/centrifuge-tinlake-0-3-0-audit/" data-wpel-link="internal"> Centrifuge Tinlake 0.3.0 Audit </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-atomex-smart-contracts-for-the-tezos-foundation/" data-wpel-link="internal"> Audit of Atomex Smart Contracts for Tezos Foundation </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-atomex-core-library-desktop-client-for-the-tezos-foundation/" data-wpel-link="internal"> Audit of Atomex: Core Library + Desktop Client for Tezos Foundation </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-thanos-wallet/" data-wpel-link="internal"> Audit of Thanos Wallet for Tezos Foundation </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-tezos-foundations-taquito/" data-wpel-link="internal"> Audit of Taquito for Tezos Foundation </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-tron-protocol/" data-wpel-link="internal"> Audit of TRON Protocol </a><p></p>
+<a href="https://leastauthority.com/blog/project-update-tahoe-lafs-for-human-rights-defenders/" data-wpel-link="internal"> Project Update: Tahoe-LAFS for Human Rights Defenders </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-band-protocols-cosmos-sdk-oracle-module/" data-wpel-link="internal"> Audit of Band Protocol’s Cosmos-SDK Oracle Module </a><p></p>
+<a href="https://leastauthority.com/blog/were-upgrading-magic-wormhole-to-magic-wormhole-for-all/" data-wpel-link="internal"> We’re upgrading Magic Wormhole to Magic Wormhole for All </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-gossipsub-v1-1-protocol-design-implementation-for-protocol-labs/" data-wpel-link="internal"> Audit of Gossipsub v1.1 Protocol Design + Implementation for Protocol Labs </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-tezoskit-for-the-tezos-foundation/" data-wpel-link="internal"> Audit of TezosKit for Tezos Foundation </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-the-centrifuge-chain/" data-wpel-link="internal"> Audit of the Centrifuge Chain </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-btg-pactuals-reitbz-token-management-dashboard-for-the-tezos-foundation/" data-wpel-link="internal"> Audit of BTG Pactual’s ReitBZ Token + Management Dashboard for Tezos Foundation </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-centrifuges-tinlake-contracts-actions/" data-wpel-link="internal"> Audit of Centrifuge’s Tinlake Contracts + Actions </a><p></p>
+<a href="https://leastauthority.com/blog/using-zkaps-to-disconnect-payment-data-from-service-data/" data-wpel-link="internal"> Using ZKAPs to Disconnect Payment Data from Service Data </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-chainsafe-utility-libraries/" data-wpel-link="internal"> Audit of ChainSafe Utility Libraries </a><p></p>
+<a href="https://leastauthority.com/blog/tezos-foundation-tzbtc-audit/" data-wpel-link="internal"> Audit of TzBTC for Tezos Foundation </a><p></p>
+<a href="https://leastauthority.com/blog/metamask_plugin_system_lavamoat_audit/" data-wpel-link="internal"> Audit of MetaMask Plugin System + LavaMoat </a><p></p>
+<a href="https://leastauthority.com/blog/ethereum-2-0-specifications/" data-wpel-link="internal"> Ethereum 2.0 Specifications </a><p></p>
+<a href="https://leastauthority.com/blog/secure-file-storage-tools-human-rights-defenders/" data-wpel-link="internal"> Adapting Secure File Storage Tools for Human Rights Defenders </a><p></p>
+<a href="https://leastauthority.com/blog/metamask_permissions_system_capnode_audit/" data-wpel-link="internal"> Audit of MetaMask Permissions System + CapNode </a><p></p>
+<a href="https://leastauthority.com/blog/ethereum-node-discovery-protocol-audit/" data-wpel-link="internal"> Our Audit of Ethereum Foundation’s Node Discovery Protocol </a><p></p>
+<a href="https://leastauthority.com/blog/least-authoritys-review-of-the-nervos-network/" data-wpel-link="internal"> Audit of the Nervos Network </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-ethereum-foundations-node-discovery-protocol/" data-wpel-link="internal"> Audit of Ethereum Foundation’s Node Discovery Protocol </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-progpow-algorithm/" data-wpel-link="internal"> Audit of ProgPoW Algorithm </a><p></p>
+<a href="https://leastauthority.com/blog/the-path-from-s4-to-privatestorage/" data-wpel-link="internal"> The Path from S4 to PrivateStorage </a><p></p>
+<a href="https://leastauthority.com/blog/least-authority-audits-metamasks-mobile-app/" data-wpel-link="internal"> Least Authority Audits MetaMask’s Mobile App </a><p></p>
+<a href="https://leastauthority.com/blog/audit-of-blockstacks-stack-investor-wallet/" data-wpel-link="internal"> Audit of Blockstack’s Stacks Investor Wallet </a><p></p>
   </body>
 </html>
