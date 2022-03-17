@@ -8,7 +8,7 @@ How to use:
 
 * download the `headlines.html` file and open it in your browser. (right-click and choose "Open With" and the name of your browser)
 
-* * [Go to CORS anywhere]('https://cors-anywhere.herokuapp.com/') and allow it, if need be
+* go to CORS anywhere `https://cors-anywhere.herokuapp.com/` and allow it, if need be
 
 CAUTION: 
 
@@ -17,3 +17,5 @@ CAUTION:
 * there is no stylesheet, so yay old school vibes
 
 * it's vanilla JS, no libraries
+
+* we use the CORS anywhere Heroku app to get around CORS
