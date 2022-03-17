@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LA Headlines Scraper</title>
+  </head>
+  <body>
+    <ul id="headlines">
+    </ul>
+	  <script>
+      var scraped = []
+
+      async function getHeadlines() {
+        let laURL = "https://leastauthority.com/blog/"
+        const PROXY_URL = 'https://cors-anywhere.herokuapp.com/'
+        for (let i = 1; i < 11; i++) {
+            let pageNumber = i.toString()
+            console.log(pageNumber)
+          try {
+            const response = await fetch(PROXY_URL + laURL+ 'page/' + pageNumber + '/')
+            const data = await response.text()
+            const parser = new DOMParser()
+            const htmlDocument = parser.parseFromString(data, "text/html")
+            const headlines = htmlDocument.querySelectorAll(".elementor-post__title")
+              for (let i = 0; i < headlines.length; i++) {
+              let elemn = headlines[i]
+              scraped.push(elemn.innerHTML)
+              console.log("headlines")
+              }
+            } catch (error) {
+              console.log(error)
+            }
+          }
+          for (let i = 0; i < scraped.length; i++) {
+            let scrapedHeadline = scraped[i]
+            const node = document.createElement("li")
+            const text_heading = document.createTextNode(scrapedHeadline)
+            node.appendChild(text_heading)
+            document.getElementById("headlines").appendChild(node)
+            console.log("appending")
+          }
+        }
+        
+      getHeadlines()
+    </script>
+  </body>
+</html>
