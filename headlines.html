@@ -17,7 +17,6 @@
         const PROXY_URL = 'https://cors-anywhere.herokuapp.com/'
         for (let i = 1; i < 11; i++) {
             let pageNumber = i.toString()
-            console.log(pageNumber)
           try {
             const response = await fetch(PROXY_URL + laURL+ 'page/' + pageNumber + '/')
             const data = await response.text()
@@ -27,7 +26,6 @@
               for (let i = 0; i < headlines.length; i++) {
               let elemn = headlines[i]
               scraped.push(elemn.innerHTML)
-              console.log("headlines")
               }
             } catch (error) {
               console.log(error)
@@ -39,7 +37,6 @@
             const text_heading = document.createTextNode(scrapedHeadline)
             node.appendChild(text_heading)
             document.getElementById("headlines").appendChild(node)
-            console.log("appending")
           }
         }
         
